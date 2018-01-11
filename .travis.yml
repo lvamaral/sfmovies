@@ -9,4 +9,4 @@ before_script:
   - yarn run db:reset
 script:
   - yarn test
-  - yarn run lin
+  - yarn run lint
