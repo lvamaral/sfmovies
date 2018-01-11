@@ -1,6 +1,6 @@
 'use strict';
 
-exports.up = (Knex, Promise) => {
+exports.up = (Knex) => {
   return Knex.schema.createTable('movies', (table) => {
     table.increments('id').primary();
     table.text('title').notNullable();
@@ -8,6 +8,4 @@ exports.up = (Knex, Promise) => {
   });
 };
 
-exports.down = (Knex, Promise) =>  {
-  return Knex.schema.dropTable('movies');
-};
+exports.down = (Knex) => Knex.schema.dropTable('movies');
