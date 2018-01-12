@@ -9,4 +9,3 @@ exports.up = (Knex) => {
 };
 
 exports.down = (Knex) => Knex.schema.dropTable('movies');
-
